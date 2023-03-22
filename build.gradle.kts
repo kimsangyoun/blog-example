@@ -17,6 +17,7 @@ allprojects {
     repositories {
         mavenCentral()
     }
+
 }
 
 subprojects {
@@ -34,11 +35,16 @@ subprojects {
     }
 
     dependencies {
+        annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
         implementation("org.jetbrains.kotlin:kotlin-reflect")
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
         implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-        testImplementation("org.springframework.boot:spring-boot-starter-test")
+        implementation ("io.github.microutils:kotlin-logging:1.12.5")
+        testImplementation("org.springframework.boot:spring-boot-starter-test") {
+            exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
+        }
+        testImplementation("com.ninja-squad:springmockk:3.0.1")
     }
 
     tasks.getByName("bootJar") {

@@ -1,0 +1,9 @@
+logging:
+  level:
+    root: warn
+    com.example.upsideapi: debug
+
+import:
+  - domain-application.yml
+  - client-application.yml
+  - redis-application.yml

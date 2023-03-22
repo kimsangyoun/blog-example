@@ -2,7 +2,8 @@ rootProject.name = "blog-example"
 
 include(
     "blog-api",
-    "blog-domain"
+    "blog-domain",
+    "client-kakao"
 )
 
 pluginManagement {
@@ -22,3 +23,5 @@ pluginManagement {
         }
     }
 }
+include("client-kakao")
+include("domain-redis")

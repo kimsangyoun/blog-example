@@ -1,5 +1,14 @@
+bootJar {enabled(false)}
+jar{enabled(true)}
 
 dependencies {
     implementation(project(":blog-domain"))
+    implementation(project(":client-kakao"))
+    implementation(project(":domain-redis"))
     implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.boot:spring-boot-starter-aop")
+    implementation("org.springdoc:springdoc-openapi-ui:1.6.3")
+    implementation("org.springdoc:springdoc-openapi-kotlin:1.6.3")
+    implementation("org.springdoc:springdoc-openapi-webmvc-core:1.6.3")
+    implementation("org.springframework.boot:spring-boot-starter-validation")
 }

@@ -1,0 +1,19 @@
+---
+spring.config.activate.on-profile: local
+
+kakao:
+  api:
+    base_url: https://dapi.kakao.com
+    rest_api_key: 234da281525c77dd4250e7fe1f89c60e
+    path:
+      blog: /v2/search/blog
+
+---
+spring.config.activate.on-profile: test
+
+kakao:
+  api:
+    base_url: https://dapi.kakao.com
+    rest_api_key: 234da281525c77dd4250e7fe1f89c60e
+    path:
+      blog: /v2/search/blog
