@@ -1,0 +1,20 @@
+spring:
+  config:
+    import:
+      - domain-application.yml
+      - client-application.yml
+      - redis-application.yml
+  profiles:
+    default: local
+  data:
+    web:
+      pageable:
+        default-page-size: 10
+        one-indexed-parameters: true
+server:
+  port: 80
+
+---
+spring.config.activate.on-profile: local
+
+---
